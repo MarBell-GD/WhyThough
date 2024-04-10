@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     //marlon signature: stream camellia music
 
     public float spd; //The speed of which the player will move between spaces, configure this in the inspector not here
+    PlayerUIManager uimanage;
 
     //Map stuffs
     GridManager manager;
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         grid = manager.grid; //<== Map is extracted from GridManager
 
         trans = FindObjectOfType<MovingTransition>();
+        uimanage = FindObjectOfType<PlayerUIManager>();
 
     }
 
@@ -55,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         //you get a cookie if you understand the code :v
 
         // Vertical/Up&Down check for open spaces to move to
-        if (Input.GetKeyDown(KeyCode.W) && !isMoving || (Input.GetKeyDown(KeyCode.S) && !isMoving))
+        if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1 && !isMoving && !uimanage.isDialouge)
         {
 
             Vector2 moveTo = new Vector2(currentPos.x, currentPos.y + 10 * Input.GetAxisRaw("Vertical"));
@@ -77,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Horizontal/Left&Right check for open spaces to move to
-        if (Input.GetAxisRaw("Horizontal") == 1 && !isMoving || Input.GetAxisRaw("Horizontal") == -1 && !isMoving)
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1 && !isMoving && !uimanage.isDialouge)
         {
 
             Vector2 moveTo = new Vector2(currentPos.x + 10 * Input.GetAxisRaw("Horizontal"), currentPos.y);

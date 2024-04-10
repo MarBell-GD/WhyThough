@@ -5,13 +5,14 @@ using UnityEngine;
 public class ClickInteract : MonoBehaviour
 {
 
-    //ripped from my code for games work
+    //ripped from my code for games work with some modifs for this game
+    [HideInInspector] public PlayerUIManager uimanage;
 
     // Start is called before the first frame update
     void Start()
     {
         
-
+        uimanage = FindObjectOfType<PlayerUIManager>();
 
     }
 
@@ -28,7 +29,13 @@ public class ClickInteract : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
 
-                
+                if(hit.collider.GetComponent<DialougeTrigger>() != null && !uimanage.isDialouge)
+                {
+
+                    hit.collider.GetComponent<DialougeTrigger>().TriggerDialouge();
+
+
+                }
 
             }
 

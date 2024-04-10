@@ -11,12 +11,17 @@ public class notes
     ^ this also basically applies to every script and thing present in Debug folders
 
     DialogueBox posits and size:
-    Origin - 0, -300, 0 // W:1700, H:300
+    Origin - 0, -350, 0 // W:1700, H:300
     Offscreen: 0, -850, 0
 
     Buttons posits:
     Origin: -390/390, -450, 0
-    Offscreen: -390/390, -450, 0
+    Offscreen: -390/390, -850, 0
+
+    Dialouge Name Box posits:
+    Left/Origin: -475, 145, 0
+    Middle: 0, 145, 0
+    Right: 475, 145, 0
 
 
 
