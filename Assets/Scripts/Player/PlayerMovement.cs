@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public Vector3 movePos;
 
+    [HideInInspector] MovingTransition trans; //trans rights mentioned?!
+
     #endregion
 
     // Start is called before the first frame update
@@ -32,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
         manager = FindObjectOfType<GridManager>();
         grid = manager.grid; //<== Map is extracted from GridManager
+
+        trans = FindObjectOfType<MovingTransition>();
 
     }
 
@@ -63,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 {
 
                     movePos = new Vector3(transform.position.x, transform.position.y, moveTo.y);
+                    trans.CurtainsClose();
                     Debug.Log("Moving to: " + movePos);
 
                 }
@@ -84,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
                 {
 
                     movePos = new Vector3(moveTo.x, transform.position.y, transform.position.z);
+                    trans.CurtainsClose();
                     Debug.Log("Moving to: " + movePos);
 
                 }
