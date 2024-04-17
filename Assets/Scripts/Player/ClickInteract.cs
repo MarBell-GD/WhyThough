@@ -7,12 +7,14 @@ public class ClickInteract : MonoBehaviour
 
     //ripped from my code for games work with some modifs for this game
     [HideInInspector] public PlayerUIManager uimanage;
+    [HideInInspector] public PlayerEmotions emotions;
 
     // Start is called before the first frame update
     void Start()
     {
         
         uimanage = FindObjectOfType<PlayerUIManager>();
+        emotions = FindObjectOfType<PlayerEmotions>();
 
     }
 
@@ -26,14 +28,13 @@ public class ClickInteract : MonoBehaviour
         if (Physics.Raycast(interact, out hit))
         {
 
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !uimanage.cantMove)
             {
 
                 if(hit.collider.GetComponent<DialougeTrigger>() != null && !uimanage.isDialouge)
                 {
 
-                    hit.collider.GetComponent<DialougeTrigger>().TriggerDialouge();
-
+                    CheckDialougeCondition(hit.collider.GetComponent<DialougeTrigger>());
 
                 }
 
@@ -42,4 +43,26 @@ public class ClickInteract : MonoBehaviour
         }
 
     }
+
+    void CheckDialougeCondition(DialougeTrigger trigger)
+    {
+
+        switch(trigger.condition)
+        {
+
+            case (DialougeTrigger.Condition.None):
+                trigger.TriggerDialouge();
+                break;
+
+            case (DialougeTrigger.Condition.Emotion):
+                if(emotions.playerEmotion == trigger.emotionReq && emotions.highestEmo >= trigger.emotionThreshold)
+                    trigger.TriggerDialouge();
+                else if(trigger.alternate)
+                    trigger.TriggerAltDialouge();
+                break;
+
+        }
+
+    }
+
 }

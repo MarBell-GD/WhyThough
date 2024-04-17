@@ -23,6 +23,10 @@ public class notes
     Middle: 0, 145, 0
     Right: 475, 145, 0
 
+    Status check posits:
+    Origin: -750, 0, 0
+    Offscreen: -1750, 0, 0
+
 
 
 

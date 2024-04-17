@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         //you get a cookie if you understand the code :v
 
         // Vertical/Up&Down check for open spaces to move to
-        if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1 && !isMoving && !uimanage.isDialouge)
+        if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1 && !isMoving && !uimanage.cantMove)
         {
 
             Vector2 moveTo = new Vector2(currentPos.x, currentPos.y + 10 * Input.GetAxisRaw("Vertical"));
@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Horizontal/Left&Right check for open spaces to move to
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1 && !isMoving && !uimanage.isDialouge)
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1 && !isMoving && !uimanage.cantMove)
         {
 
             Vector2 moveTo = new Vector2(currentPos.x + 10 * Input.GetAxisRaw("Horizontal"), currentPos.y);

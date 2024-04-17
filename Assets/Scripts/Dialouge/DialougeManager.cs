@@ -30,7 +30,7 @@ public class DialougeManager : MonoBehaviour
     {
         //okay there was update code this time lol, but not much
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Space))
             DisplayNextEntry();
 
         //https://open.spotify.com/track/6bzpQS64UHCXnq19HDOnK7?si=0366336ffbbd413c
@@ -53,7 +53,17 @@ public class DialougeManager : MonoBehaviour
 
         }
 
-        DisplayNextEntry();
+        DisplayFirstEntry();
+
+    }
+
+    public void DisplayFirstEntry()
+    {
+
+        DialougeEntry entry = DialogueSentences.Dequeue();
+        InstantDialougeInit(entry);
+        StopAllCoroutines();
+        StartCoroutine(TypingDialouge(entry.text));
 
     }
 
@@ -85,6 +95,31 @@ public class DialougeManager : MonoBehaviour
 
             DialogueText.text += letter;
             yield return new WaitForSeconds(TypeTime);
+
+        }
+
+    }
+
+    void InstantDialougeInit(DialougeEntry entry) //Happens before the dialouge starts typing, to setup things like the name box
+    {
+
+        NameText.text = entry.Name;
+        NameText.color = entry.nameColor;
+
+        switch (entry.side)
+        {
+
+            case (DialougeEntry.nameSide.Left):
+                uimanage.instLeft();
+                break;
+
+            case (DialougeEntry.nameSide.Middle):
+                uimanage.instMiddle();
+                break;
+
+            case (DialougeEntry.nameSide.Right):
+                uimanage.instRight();
+                break;
 
         }
 

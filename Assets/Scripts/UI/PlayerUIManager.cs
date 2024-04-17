@@ -19,6 +19,12 @@ public class PlayerUIManager : MonoBehaviour
     public GameObject dialougeBox;
     public GameObject dialougeName;
 
+    public GameObject status;
+    public GameObject emoNeutral;
+    public GameObject emoRage;
+    public GameObject emoLazy;
+    public GameObject emoFear;
+
     //Vectors
     Vector3 examineOffscr;
     Vector3 examineOrigin;
@@ -33,8 +39,16 @@ public class PlayerUIManager : MonoBehaviour
     Vector3 nameRight;
     Vector3 nameMiddle;
 
+    Vector3 statusOrigin;
+    Vector3 statusOffscr;
+
     //Gameplay-affecting stuff
-    [HideInInspector] public bool isDialouge; //If dialouge is initiated, player cannot move
+    [HideInInspector] public bool isDialouge;
+    [HideInInspector] public bool isStatus;
+    [HideInInspector] public bool cantMove; //Used to be only for dialouge - if true, player cannot move
+
+    //Other
+    [HideInInspector] PlayerEmotions emotions;
 
     #endregion
 
@@ -55,6 +69,11 @@ public class PlayerUIManager : MonoBehaviour
         nameLeft = new Vector3(-475f, 145f, 0);
         nameRight = new Vector3(475f, 145f, 0);
         nameMiddle = new Vector3(0, 145f, 0);
+
+        statusOrigin = new Vector3(-750, 0, 0);
+        statusOffscr = new Vector3(-1750, 0, 0);
+
+        emotions = FindObjectOfType<PlayerEmotions>();
 
     }
 
@@ -78,10 +97,56 @@ public class PlayerUIManager : MonoBehaviour
 
         //https://open.spotify.com/album/1164QDi9CiftjLg0ecvooW?si=AWGgNSpYT4q62_08uQKVtQ
 
+        //...character development happened, there is now update code. celebration will commence shortly...
+
+        switch(emotions.playerEmotion)
+        {
+
+            case (PlayerEmotions.Emotion.Neutral):
+                emoNeutral.SetActive(true);
+                emoRage.SetActive(false);
+                emoLazy.SetActive(false);
+                emoFear.SetActive(false);
+                break;
+
+            case (PlayerEmotions.Emotion.Rage):
+                emoNeutral.SetActive(false);
+                emoRage.SetActive(true);
+                emoLazy.SetActive(false);
+                emoFear.SetActive(false);
+                break;
+
+            case (PlayerEmotions.Emotion.Laziness):
+                emoNeutral.SetActive(false);
+                emoRage.SetActive(false);
+                emoLazy.SetActive(true);
+                emoFear.SetActive(false);
+                break;
+
+            case (PlayerEmotions.Emotion.Fear):
+                emoNeutral.SetActive(false);
+                emoRage.SetActive(false);
+                emoLazy.SetActive(false);
+                emoFear.SetActive(true);
+                break;
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && !isDialouge)
+        {
+
+            if (!isStatus)
+                StatusAppear();
+            else
+                StatusDisappear();
+
+        }
+
     }
 
     #endregion
 
+    #region Screen Dim
     public void DimScreen() //Dim the player view (Used for certain UI for clarity)
     {
 
@@ -95,6 +160,10 @@ public class PlayerUIManager : MonoBehaviour
         screenDim.SetActive(false);
 
     }
+
+    #endregion
+
+    #region Examine and Map UI
 
     public void PutAwayUI() //Make the Examine and Map buttons go offscreen
     {
@@ -112,11 +181,16 @@ public class PlayerUIManager : MonoBehaviour
 
     }
 
+    #endregion
+
+    #region Dialouge UI
+
     public void CallDialougeUI() //Move the dialouge UI onto the screen
     {
 
         dialougeBox.GetComponent<RectTransform>().LeanMoveLocal(dialougeOnscr, 0.5f);
         isDialouge = true;
+        cantMove = true;
 
     }
 
@@ -125,6 +199,7 @@ public class PlayerUIManager : MonoBehaviour
 
         dialougeBox.GetComponent<RectTransform>().LeanMoveLocal(dialougeOrigin, 0.5f);
         isDialouge = false;
+        cantMove = false;
 
     }
 
@@ -166,5 +241,56 @@ public class PlayerUIManager : MonoBehaviour
         dialougeName.GetComponent<RectTransform>().LeanMoveLocal(nameRight, 0.15f);
 
     }
+
+    public void instLeft() //Reposition the dialouge name box to the left, but instant
+    {
+
+        dialougeName.GetComponent<RectTransform>().LeanMoveLocal(nameLeft, 0f);
+
+    }
+
+    public void instMiddle() //Reposition the dialouge name box to the middle, but instant
+    {
+
+        dialougeName.GetComponent<RectTransform>().LeanMoveLocal(nameMiddle, 0f);
+
+    }
+
+    public void instRight() //Reposition the dialouge name box to the right, but instant
+    {
+
+        dialougeName.GetComponent<RectTransform>().LeanMoveLocal(nameRight, 0f);
+
+    }
+
+    #endregion
+
+    #region Status
+
+    public void StatusAppear()
+    {
+
+        DimScreen();
+        PutAwayUI();
+
+        status.GetComponent<RectTransform>().LeanMoveLocal(statusOrigin, 0.25f);
+        isStatus = true;
+        cantMove = true;
+
+    }
+
+    public void StatusDisappear()
+    {
+
+        undimScreen();
+        ReturnUI();
+
+        status.GetComponent<RectTransform>().LeanMoveLocal(statusOffscr, 0.25f);
+        isStatus = false;
+        cantMove = false;
+
+    }
+
+    #endregion
 
 }

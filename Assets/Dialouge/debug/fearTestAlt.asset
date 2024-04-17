@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: fearTestAlt
+  m_EditorClassIdentifier: 
+  dialouges:
+  - Name: Unknown...
+    side: 1
+    nameColor: {r: 1, g: 1, b: 1, a: 1}
+    text: I'd stop you to check your emotion, but you have nothing going on that's
+      all that interesting to me.
+  - Name: Unknown...
+    side: 1
+    nameColor: {r: 1, g: 1, b: 1, a: 1}
+    text: I'm only here to help the ones shrouded in fear.

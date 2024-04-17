@@ -43,10 +43,10 @@ MonoBehaviour:
     nameColor: {r: 0, g: 1, b: 0.6173377, a: 1}
     text: And-
   - Name: Little Red
-    side: 2
+    side: 0
     nameColor: {r: 1, g: 0.2216981, b: 0.25452656, a: 1}
     text: Okay dev I think we get it...
   - Name: ???
     side: 1
     nameColor: {r: 0, g: 1, b: 0.63323593, a: 1}
-    text: let me have my moment...
+    text: let me have my moment plz...

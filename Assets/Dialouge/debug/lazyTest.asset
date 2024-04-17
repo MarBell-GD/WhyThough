@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: lazyTest
+  m_EditorClassIdentifier: 
+  dialouges:
+  - Name: Unknown...
+    side: 1
+    nameColor: {r: 1, g: 1, b: 1, a: 1}
+    text: Hey, mind stopping for a moment?
+  - Name: Unknown...
+    side: 1
+    nameColor: {r: 1, g: 1, b: 1, a: 1}
+    text: You seem like a slacker...
+  - Name: Unknown...
+    side: 1
+    nameColor: {r: 1, g: 1, b: 1, a: 1}
+    text: ...
+  - Name: Unknown...
+    side: 1
+    nameColor: {r: 1, g: 1, b: 1, a: 1}
+    text: And for the most part, I'm absolutely correct. Nothing wrong with being
+      a little lazy though...as long as you're not a certain someone.
+  - Name: ???
+    side: 1
+    nameColor: {r: 0, g: 1, b: 0.5733938, a: 1}
+    text: (oh no, the dialouge is getting self aware)
