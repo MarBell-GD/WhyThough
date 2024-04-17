@@ -2247,7 +2247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81056644c3f90d94eb23ec267cb9b03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 15
+  offset: 10
   overhead: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
   movement: {fileID: 0}
@@ -3007,7 +3007,7 @@ MonoBehaviour:
   condition: 1
   alternate: 1
   altDialouge: {fileID: 11400000, guid: 320f1e606db82ab4d8adf6b77f38c0ff, type: 2}
-  emotionReq: 0
+  emotionReq: 1
   emotionThreshold: 50
 --- !u!108 &1733142024
 Light:
@@ -4228,7 +4228,7 @@ MonoBehaviour:
   condition: 1
   alternate: 1
   altDialouge: {fileID: 11400000, guid: c63118d3533a73641856499ced0426ef, type: 2}
-  emotionReq: 0
+  emotionReq: 2
   emotionThreshold: 50
 --- !u!108 &2141048794
 Light:
