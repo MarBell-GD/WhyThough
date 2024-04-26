@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2839078ba5a863d4595d114cb87b447c, type: 3}
-  m_Name: 3
+  m_Script: {fileID: 11500000, guid: 7b7b013a38957754ebdaab210b63fe96, type: 3}
+  m_Name: DebugItem
   m_EditorClassIdentifier: 
-  pos: {x: 10, y: 10}
-  background: {fileID: 21300000, guid: 90250bfd9b9731147a0503f04c147196, type: 3}
-  requiresThing: 0
+  Name: Glitchy Key
+  Image: {fileID: 21300000, guid: 41df77e644cd2ac469628f835710d35d, type: 3}
+  Description: A placeholder key of some sort...

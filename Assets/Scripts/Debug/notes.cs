@@ -27,6 +27,12 @@ public class notes
     Origin: -750, 0, 0
     Offscreen: -1750, 0, 0
 
+    Examine UI scaling:
+    Origin: 1800, 800
+    Origin(BG): 1770, 780
+
+    Scaled: 0, 0 for both
+
 
 
 

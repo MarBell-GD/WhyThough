@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2839078ba5a863d4595d114cb87b447c, type: 3}
-  m_Name: 3
+  m_Script: {fileID: 11500000, guid: 5e87ce6a058a59d4c8a070e197a3e343, type: 3}
+  m_Name: DebugItemSpawn
   m_EditorClassIdentifier: 
-  pos: {x: 10, y: 10}
-  background: {fileID: 21300000, guid: 90250bfd9b9731147a0503f04c147196, type: 3}
-  requiresThing: 0
+  targetItem: {fileID: 11400000, guid: 839a5272ef939ac4080732939870463a, type: 2}
+  xSpawn: -325
+  ySpawn: -200
+  wasCollected: 0

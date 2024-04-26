@@ -11,19 +11,26 @@ public class PlayerUIManager : MonoBehaviour
     #region Variables
 
     //Basic vars
+    [Header("Buttons")]
     public GameObject examineButton;
     public GameObject mapButton;
 
+    [Header("Screen Dim")]
     public GameObject screenDim;
 
+    [Header("Dialouge UI")]
     public GameObject dialougeBox;
     public GameObject dialougeName;
 
+    [Header("Status UI")]
     public GameObject status;
     public GameObject emoNeutral;
     public GameObject emoRage;
     public GameObject emoLazy;
     public GameObject emoFear;
+
+    [Header("Examine UI")]
+    public GameObject examineUI;
 
     //Vectors
     Vector3 examineOffscr;
@@ -45,6 +52,7 @@ public class PlayerUIManager : MonoBehaviour
     //Gameplay-affecting stuff
     [HideInInspector] public bool isDialouge;
     [HideInInspector] public bool isStatus;
+    [HideInInspector] public bool isExamining;
     [HideInInspector] public bool cantMove; //Used to be only for dialouge - if true, player cannot move
 
     //Other
@@ -55,7 +63,8 @@ public class PlayerUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        //buncha vectors and shit
         screenDim.SetActive(false);
 
         examineOrigin = new Vector3(-390f, -450f, 0);
@@ -74,6 +83,14 @@ public class PlayerUIManager : MonoBehaviour
         statusOffscr = new Vector3(-1750, 0, 0);
 
         emotions = FindObjectOfType<PlayerEmotions>();
+
+        examineUI.GetComponent<RectTransform>().LeanScaleX(0, 0f);
+        examineUI.GetComponent<RectTransform>().LeanScaleY(0, 0f);
+
+        isDialouge = false;
+        isStatus = false;
+        isExamining = false;
+        cantMove = false;
 
     }
 
@@ -287,6 +304,32 @@ public class PlayerUIManager : MonoBehaviour
 
         status.GetComponent<RectTransform>().LeanMoveLocal(statusOffscr, 0.25f);
         isStatus = false;
+        cantMove = false;
+
+    }
+
+    #endregion
+
+    #region Examine
+
+    public void OpenExamineUI()
+    {
+
+        examineUI.GetComponent<RectTransform>().LeanScaleX(1, 0.2f);
+        examineUI.GetComponent<RectTransform>().LeanScaleY(1, 0.2f);
+
+        isExamining = true;
+        cantMove = true;
+
+    }
+
+    public void CloseExamineUI()
+    {
+
+        examineUI.GetComponent<RectTransform>().LeanScaleX(0, 0.25f);
+        examineUI.GetComponent<RectTransform>().LeanScaleY(0, 0.25f);
+
+        isExamining = false;
         cantMove = false;
 
     }
