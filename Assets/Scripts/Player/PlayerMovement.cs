@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
                     movePos = new Vector3(transform.position.x, transform.position.y, moveTo.y);
                     trans.CurtainsClose();
-                    Debug.Log("Moving to: " + movePos);
+                    //Debug.Log("Moving to: " + movePos);
 
                 }
 
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
                     movePos = new Vector3(moveTo.x, transform.position.y, transform.position.z);
                     trans.CurtainsClose();
-                    Debug.Log("Moving to: " + movePos);
+                    //Debug.Log("Moving to: " + movePos);
 
                 }
 

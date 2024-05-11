@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Dialouge : ScriptableObject
+public class Choice : ScriptableObject
 {
 
-    public dialogConsequence consequence;
-
-    public DialougeEntry[] dialouges;
-
-    public enum dialogConsequence
+    public string ChoiceText;
+    public enum choiceConsequence
     {
 
         None,
+        StartNewDialog,
         ChangeEmotion,
         GiveItem,
-        Both
+        Multiple
 
     }
 
+    public choiceConsequence consequence;
+
+    [Header("Consequence: Dialog")]
+    public Dialouge newDialouge;
+
     [Header("Consequence: Emotion")]
     public PlayerEmotions.Emotion targetEmotion;
-    public float emotionChange;
+    public float change;
     public bool subtract;
 
     [Header("Consequence: Item")]

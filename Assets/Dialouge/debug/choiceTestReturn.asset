@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: choiceTestReturn
+  m_EditorClassIdentifier: 
+  consequence: 0
+  dialouges:
+  - type: 0
+    Name: Choice Master
+    side: 1
+    nameColor: {r: 0.68810844, g: 0, b: 1, a: 1}
+    text: Ha, would you look at that! If it isn't my lovel little rascal of the hour!
+      We already had our little choice game Red, I don't need any more, whatcha back
+      for?
+    choiceNum: 1
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 1
+    Name: Choice Master
+    side: 1
+    nameColor: {r: 0.68810844, g: 0, b: 1, a: 1}
+    text: Heh, I'm just playin' witcha, you can never make too many choices in life,
+      gahaha! Want me to remove one of your emotions?
+    choiceNum: 2
+    c1: {fileID: 11400000, guid: 7c897f174d568d043930aaf6d67eece5, type: 2}
+    c2: {fileID: 11400000, guid: edad19d9bfab0884c80c02bce53736fd, type: 2}
+    c3: {fileID: 0}
+  targetEmotion: 3
+  emotionChange: 0
+  subtract: 0
+  givenItem: {fileID: 0}

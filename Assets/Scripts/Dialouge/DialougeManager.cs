@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,12 +8,29 @@ public class DialougeManager : MonoBehaviour
 {
 
     PlayerUIManager uimanage;
-    private Queue<DialougeEntry> DialogueSentences;
+    public Queue<DialougeEntry> DialogueSentences;
 
     public TMPro.TextMeshProUGUI NameText;
     public TMPro.TextMeshProUGUI DialogueText;
 
     public float TypeTime;
+    public Dialouge.dialogConsequence aftermath;
+
+    PlayerEmotions.Emotion targetEmotion;
+    float emotionChange;
+    bool subtract;
+
+    Item givenItem;
+
+    [Header("Choice-related")]
+    public ChoiceButton c1button;
+    public TMPro.TextMeshProUGUI c1Text;
+
+    public ChoiceButton c2button;
+    public TMPro.TextMeshProUGUI c2Text;
+
+    public ChoiceButton c3button;
+    public TMPro.TextMeshProUGUI c3Text;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +48,7 @@ public class DialougeManager : MonoBehaviour
     {
         //okay there was update code this time lol, but not much
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && uimanage.choiceMade)
             DisplayNextEntry();
 
         //https://open.spotify.com/track/6bzpQS64UHCXnq19HDOnK7?si=0366336ffbbd413c
@@ -50,6 +68,24 @@ public class DialougeManager : MonoBehaviour
         {
 
             DialogueSentences.Enqueue(entry);
+
+        }
+
+        aftermath = dialouge.consequence;
+
+        if(aftermath == Dialouge.dialogConsequence.ChangeEmotion || aftermath == Dialouge.dialogConsequence.Both)
+        {
+
+            targetEmotion = dialouge.targetEmotion;
+            emotionChange = dialouge.emotionChange;
+            subtract = dialouge.subtract;
+
+        }
+
+        if (aftermath == Dialouge.dialogConsequence.GiveItem || aftermath == Dialouge.dialogConsequence.Both)
+        {
+
+            givenItem = dialouge.givenItem;
 
         }
 
@@ -73,6 +109,29 @@ public class DialougeManager : MonoBehaviour
         if(DialogueSentences.Count == 0)
         {
 
+            switch (aftermath)
+            {
+
+                case (Dialouge.dialogConsequence.None):
+                    //getting freaky on a friday night yeah :D
+                    break;
+
+                case (Dialouge.dialogConsequence.ChangeEmotion):
+                    PlayerEmotions emotions = FindObjectOfType<PlayerEmotions>();
+                    emotions.EmotionAdjust(targetEmotion, emotionChange, subtract);
+                    break;
+
+                case (Dialouge.dialogConsequence.GiveItem):
+                    //me when the
+                    break;
+
+                case (Dialouge.dialogConsequence.Both):
+                    PlayerEmotions emotionz = FindObjectOfType<PlayerEmotions>();
+                    emotionz.EmotionAdjust(targetEmotion, emotionChange, subtract);
+                    break;
+
+            }
+
             EndDialouge();
             return;
 
@@ -82,6 +141,47 @@ public class DialougeManager : MonoBehaviour
         DialougeInit(entry);
         StopAllCoroutines();
         StartCoroutine(TypingDialouge(entry.text));
+
+        if(entry.type == DialougeEntry.dialougeType.Choice)
+        {
+
+            c1button.choice = entry.c1;
+
+            if(entry.c2 != null)
+                c2button.choice = entry.c2;
+
+            if (entry.c3 != null)
+                c3button.choice = entry.c3;
+
+            c1Text.text = c1button.choice.ChoiceText;
+
+            if (c2button.choice == null)
+                c2Text.text = "...";
+            else
+                c2Text.text = c2button.choice.ChoiceText;
+
+            if (c3button.choice == null)
+                c3Text.text = "...";
+            else
+                c3Text.text = c3button.choice.ChoiceText;
+
+            c1button.gameObject.SetActive(true);
+            c2button.gameObject.SetActive(true);
+            c3button.gameObject.SetActive(true);
+
+            if(entry.choiceNum == 2)
+                c3button.gameObject.SetActive(false);
+            else if(entry.choiceNum == 1)
+            {
+
+                c2button.gameObject.SetActive(false);
+                c3button.gameObject.SetActive(false);
+
+            }
+
+            uimanage.ChoicesAppear();
+
+        }
 
     }
 

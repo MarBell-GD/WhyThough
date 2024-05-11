@@ -51,7 +51,10 @@ public class ClickInteract : MonoBehaviour
         {
 
             case (DialougeTrigger.Condition.None):
-                trigger.TriggerDialouge();
+                if(trigger.alternate && !trigger.hasInteracted || !trigger.alternate)
+                    trigger.TriggerDialouge();
+                else if(trigger.alternate && trigger.hasInteracted)
+                    trigger.TriggerAltDialouge();
                 break;
 
             case (DialougeTrigger.Condition.Emotion):

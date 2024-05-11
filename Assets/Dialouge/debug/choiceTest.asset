@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: choiceTest
+  m_EditorClassIdentifier: 
+  consequence: 0
+  dialouges:
+  - type: 0
+    Name: Choice Master
+    side: 1
+    nameColor: {r: 0.68810844, g: 0, b: 1, a: 1}
+    text: What's shakin Red? Name's the Choice Master, and I'm here with one goal
+      in mind, the best one too...testing the CHOICES BABYYYY!!!
+    choiceNum: 1
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Choice Master
+    side: 1
+    nameColor: {r: 0.68810844, g: 0, b: 1, a: 1}
+    text: Welp, all these choices are gonna be about emotions, select wisely, because
+      whatever you select is what I'll inflict you with!
+    choiceNum: 1
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Choice Master
+    side: 1
+    nameColor: {r: 0.68810844, g: 0, b: 1, a: 1}
+    text: 'Are you ready?
+
+      ...Nah, you''re right, you didn''t have a choice
+      there, heh.'
+    choiceNum: 1
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 1
+    Name: Choice Master
+    side: 1
+    nameColor: {r: 0.68810844, g: 0, b: 1, a: 1}
+    text: NOW...make your choice, what'll it be?
+    choiceNum: 3
+    c1: {fileID: 11400000, guid: c28b3322d7d63e144ad9c165e9e05d20, type: 2}
+    c2: {fileID: 11400000, guid: 194e831e7ac0fe84cb848931c0b6274b, type: 2}
+    c3: {fileID: 11400000, guid: 3356329ac380f1744bc5092c56caf300, type: 2}
+  targetEmotion: 3
+  emotionChange: 0
+  subtract: 0
+  givenItem: {fileID: 0}

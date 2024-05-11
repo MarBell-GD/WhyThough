@@ -32,6 +32,9 @@ public class PlayerUIManager : MonoBehaviour
     [Header("Examine UI")]
     public GameObject examineUI;
 
+    [Header("ChoiceUI")]
+    public GameObject choiceUI;
+
     //Vectors
     Vector3 examineOffscr;
     Vector3 examineOrigin;
@@ -49,10 +52,14 @@ public class PlayerUIManager : MonoBehaviour
     Vector3 statusOrigin;
     Vector3 statusOffscr;
 
+    Vector3 choiceOrigin;
+    Vector3 choiceOffscr;
+
     //Gameplay-affecting stuff
     [HideInInspector] public bool isDialouge;
     [HideInInspector] public bool isStatus;
     [HideInInspector] public bool isExamining;
+    [HideInInspector] public bool choiceMade;
     [HideInInspector] public bool cantMove; //Used to be only for dialouge - if true, player cannot move
 
     //Other
@@ -82,6 +89,9 @@ public class PlayerUIManager : MonoBehaviour
         statusOrigin = new Vector3(-750, 0, 0);
         statusOffscr = new Vector3(-1750, 0, 0);
 
+        choiceOrigin = new Vector3(0, 205, 0);
+        choiceOffscr = new Vector3(0, 950, 0);
+
         emotions = FindObjectOfType<PlayerEmotions>();
 
         examineUI.GetComponent<RectTransform>().LeanScaleX(0, 0f);
@@ -90,6 +100,7 @@ public class PlayerUIManager : MonoBehaviour
         isDialouge = false;
         isStatus = false;
         isExamining = false;
+        choiceMade = true;
         cantMove = false;
 
     }
@@ -149,7 +160,7 @@ public class PlayerUIManager : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && !isDialouge)
+        if(Input.GetKeyDown(KeyCode.Tab) && !isDialouge)
         {
 
             if (!isStatus)
@@ -331,6 +342,28 @@ public class PlayerUIManager : MonoBehaviour
 
         isExamining = false;
         cantMove = false;
+
+    }
+
+    #endregion
+
+    #region Choices
+
+    public void ChoicesAppear()
+    {
+
+        choiceUI.GetComponent<RectTransform>().LeanMoveLocal(choiceOrigin, 0.2f);
+
+        choiceMade = false;
+
+    }
+
+    public void ChoicesBegone()
+    {
+
+        choiceUI.GetComponent<RectTransform>().LeanMoveLocal(choiceOffscr, 0.2f);
+        
+        choiceMade = true;
 
     }
 

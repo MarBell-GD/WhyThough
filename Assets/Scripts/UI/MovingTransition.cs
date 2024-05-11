@@ -48,7 +48,7 @@ public class MovingTransition : MonoBehaviour
 
         uiPos.LeanMoveLocal(init, 0f);
         uiPos.LeanMoveLocal(Vector3.zero, 0.5f);
-        Debug.Log("curtains close...");
+        //Debug.Log("curtains close...");
 
     }
 

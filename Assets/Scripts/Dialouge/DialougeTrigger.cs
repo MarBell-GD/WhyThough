@@ -19,15 +19,24 @@ public class DialougeTrigger : MonoBehaviour
     [Header("Alternate Dialouge")]
     public bool alternate;
     public Dialouge altDialouge;
+    [HideInInspector] public bool hasInteracted;
 
     [Header("Condition: Emotion")]
     public PlayerEmotions.Emotion emotionReq;
     [Range(1, 100)] public float emotionThreshold;
 
+    private void Start()
+    {
+
+        hasInteracted = false;
+
+    }
+
     public void TriggerDialouge()
     {
 
         FindObjectOfType<DialougeManager>().StartDialouge(dialouge);
+        hasInteracted = true;
 
     }
 
