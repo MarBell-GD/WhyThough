@@ -32,6 +32,7 @@ public class PlayerStatus : MonoBehaviour
         if(dialouge == null)
         {
 
+            gameOver = true;
             Debug.Log("It's all over.");
             return;
 
