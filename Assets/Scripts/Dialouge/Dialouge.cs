@@ -16,7 +16,9 @@ public class Dialouge : ScriptableObject
         None,
         ChangeEmotion,
         GiveItem,
-        Both
+        Both,
+        Damage,
+        BadEnding
 
     }
 

@@ -8,12 +8,14 @@ public class DialougeManager : MonoBehaviour
 {
 
     PlayerUIManager uimanage;
+
+    [Header("Init")]
     public Queue<DialougeEntry> DialogueSentences;
 
     public TMPro.TextMeshProUGUI NameText;
     public TMPro.TextMeshProUGUI DialogueText;
 
-    public float TypeTime;
+    public float TypeTime; //Might make it so dialouge entires can change this, I dunno, will def speed it up tho
     public Dialouge.dialogConsequence aftermath;
 
     PlayerEmotions.Emotion targetEmotion;
@@ -31,6 +33,11 @@ public class DialougeManager : MonoBehaviour
 
     public ChoiceButton c3button;
     public TMPro.TextMeshProUGUI c3Text;
+
+    [Header("Other UI Stuff")]
+    public GameObject char1;
+    public GameObject char2;
+    public GameObject char3;
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +107,48 @@ public class DialougeManager : MonoBehaviour
         InstantDialougeInit(entry);
         StopAllCoroutines();
         StartCoroutine(TypingDialouge(entry.text));
+
+        if (entry.char1present)
+        {
+
+            char1.GetComponent<RectTransform>().LeanMoveLocalY(-90f, 0.5f);
+            char1.GetComponent<Image>().sprite = entry.char1;
+
+        }
+        else
+        {
+
+            char1.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.75f);
+
+        }
+
+        if (entry.char2present)
+        {
+
+            char2.GetComponent<RectTransform>().LeanMoveLocalY(-90f, 0.5f);
+            char2.GetComponent<Image>().sprite = entry.char2;
+
+        }
+        else
+        {
+
+            char2.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.75f);
+
+        }
+
+        if (entry.char3present)
+        {
+
+            char3.GetComponent<RectTransform>().LeanMoveLocalY(-90f, 0.5f);
+            char3.GetComponent<Image>().sprite = entry.char3;
+
+        }
+        else
+        {
+
+            char3.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.75f);
+
+        }
 
     }
 
@@ -183,6 +232,48 @@ public class DialougeManager : MonoBehaviour
 
         }
 
+        if (entry.char1present)
+        {
+
+            char1.GetComponent<RectTransform>().LeanMoveLocalY(-90f, 0.5f);
+            char1.GetComponent<Image>().sprite = entry.char1;
+
+        }
+        else
+        {
+
+            char1.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.75f);
+
+        }
+
+        if (entry.char2present)
+        {
+
+            char2.GetComponent<RectTransform>().LeanMoveLocalY(-90f, 0.5f);
+            char2.GetComponent<Image>().sprite = entry.char2;
+
+        }
+        else
+        {
+
+            char2.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.75f);
+
+        }
+
+        if (entry.char3present)
+        {
+
+            char3.GetComponent<RectTransform>().LeanMoveLocalY(-90f, 0.5f);
+            char3.GetComponent<Image>().sprite = entry.char3;
+
+        }
+        else
+        {
+
+            char3.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.75f);
+
+        }
+
     }
 
     IEnumerator TypingDialouge(string sentence)
@@ -200,7 +291,9 @@ public class DialougeManager : MonoBehaviour
 
     }
 
-    void InstantDialougeInit(DialougeEntry entry) //Happens before the dialouge starts typing, to setup things like the name box
+    //Happens before the *first* dialouge entry after dialouge is initiated starts typing
+    //Makes it so the name box is already in position before the UI appears
+    void InstantDialougeInit(DialougeEntry entry)
     {
 
         NameText.text = entry.Name;
@@ -225,7 +318,8 @@ public class DialougeManager : MonoBehaviour
 
     }
 
-    void DialougeInit(DialougeEntry entry) //Happens before the dialouge starts typing, to setup things like the name box
+    //Happens before the dialouge entry starts typing
+    void DialougeInit(DialougeEntry entry)
     {
 
         NameText.text = entry.Name;
@@ -252,6 +346,10 @@ public class DialougeManager : MonoBehaviour
 
     void EndDialouge()
     {
+
+        char1.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.4f);
+        char2.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.4f);
+        char3.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.4f);
 
         Debug.Log("Alright, we're done here...");
         uimanage.DialougeFinished();

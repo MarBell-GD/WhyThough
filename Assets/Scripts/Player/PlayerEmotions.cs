@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerEmotions : MonoBehaviour
 {
 
-    [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float rageEmo;
-    [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float lazyEmo;
-    [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float fearEmo;
+    [HideInInspector] [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float rageEmo;
+    [HideInInspector] [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float lazyEmo;
+    [HideInInspector] [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float fearEmo;
 
     [HideInInspector] public float highestEmo;
 

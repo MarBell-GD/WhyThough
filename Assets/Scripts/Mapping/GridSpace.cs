@@ -11,7 +11,9 @@ public class GridSpace : ScriptableObject
     public Sprite background; //For examination
     
     public bool requiresThing; //Doesn't do anything for now...
+    [HideInInspector] public bool currentSpace;
 
     public ItemSpawn spawn;
-    
+    [HideInInspector] public bool wasCollected;
+
 }

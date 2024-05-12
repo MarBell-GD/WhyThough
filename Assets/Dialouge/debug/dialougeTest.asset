@@ -12,41 +12,145 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
   m_Name: dialougeTest
   m_EditorClassIdentifier: 
+  consequence: 0
   dialouges:
-  - Name: Little Red
+  - type: 0
+    Name: Little Red
     side: 0
     nameColor: {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: Hey guys it's me little red riding hood from the hit game Why Though (Remastered)
       featuring Dante from the Devil May Cry series.
-  - Name: ???
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
     side: 1
     nameColor: {r: 0, g: 1, b: 0.6173377, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: Did I say Dante from DMC in the code...I meant the Dante from Warframe...
-  - Name: ???
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
     side: 2
     nameColor: {r: 0, g: 1, b: 0.6173377, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: I guess it's alright though, I mean the dialouge works now!
-  - Name: ???
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
     side: 0
     nameColor: {r: 0, g: 1, b: 0.6173377, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: On top of that my name can go side to side...
-  - Name: ???
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
     side: 1
     nameColor: {r: 0, g: 1, b: 0.6173377, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: Like this!!
-  - Name: ???
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
     side: 0
     nameColor: {r: 0, g: 1, b: 0.6173377, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: And this!!
-  - Name: ???
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
     side: 2
     nameColor: {r: 0, g: 1, b: 0.6173377, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: And-
-  - Name: Little Red
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Little Red
     side: 0
     nameColor: {r: 1, g: 0.2216981, b: 0.25452656, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: Okay dev I think we get it...
-  - Name: ???
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
     side: 1
     nameColor: {r: 0, g: 1, b: 0.63323593, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
     text: let me have my moment plz...
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  targetEmotion: 0
+  emotionChange: 0
+  subtract: 0
+  givenItem: {fileID: 0}

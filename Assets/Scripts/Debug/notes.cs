@@ -41,6 +41,13 @@ public class notes
     Origin: 0, 205, 0
     Offscr: 0, 950, 0
 
+    Dialouge Character UI posits:
+    Left: -506, -90
+    Middle: 0, -90
+    Right: 506, -90
+
+    Offscr: Add -1000 to Y
+
 
 
 

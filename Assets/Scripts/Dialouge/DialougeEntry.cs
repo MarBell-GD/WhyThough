@@ -28,6 +28,16 @@ public class DialougeEntry
     public nameSide side;
     public Color nameColor;
 
+    [Header("Characters")]
+    public bool char1present;
+    public Sprite char1;
+    [Space]
+    public bool char2present;
+    public Sprite char2;
+    [Space]
+    public bool char3present;
+    public Sprite char3;
+
     [Header("Type: Dialouge")]
     [TextArea(3, 5)] public string text; //What they will say
 
