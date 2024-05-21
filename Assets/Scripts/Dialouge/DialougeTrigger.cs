@@ -16,14 +16,20 @@ public class DialougeTrigger : MonoBehaviour
 
     }
 
+    [Header("Condition: Emotion")]
+    public PlayerEmotions.Emotion emotionReq;
+    [Range(1, 100)] public float emotionThreshold;
+
     [Header("Alternate Dialouge")]
     public bool alternate;
     public Dialouge altDialouge;
     [HideInInspector] public bool hasInteracted;
 
-    [Header("Condition: Emotion")]
-    public PlayerEmotions.Emotion emotionReq;
-    [Range(1, 100)] public float emotionThreshold;
+    [Header("Alternate Condition: Emotion")]
+    public PlayerEmotions.Emotion AltemotionReq;
+    [Range(1, 100)] public float AltemotionThreshold;
+
+
 
     private void Start()
     {

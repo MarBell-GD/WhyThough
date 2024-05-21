@@ -32,8 +32,11 @@ public class PlayerUIManager : MonoBehaviour
     [Header("Examine UI")]
     public GameObject examineUI;
 
-    [Header("ChoiceUI")]
+    [Header("Choice UI")]
     public GameObject choiceUI;
+
+    [Header("Bad End // Game Over UI")]
+    public GameObject gameOverUI;
 
     //Vectors
     Vector3 examineOffscr;
@@ -55,11 +58,16 @@ public class PlayerUIManager : MonoBehaviour
     Vector3 choiceOrigin;
     Vector3 choiceOffscr;
 
+    Vector3 gameOverOrigin;
+    Vector3 gameOverOffscr;
+
     //Gameplay-affecting stuff
     [HideInInspector] public bool isDialouge;
     [HideInInspector] public bool isStatus;
     [HideInInspector] public bool isExamining;
     [HideInInspector] public bool choiceMade;
+    [HideInInspector] public bool terminateEverything; //sounds so evil lmao,
+                                                       //like TERMINATE ALL PROTOCOLS NOW, THE HUMAN RACE MUST DIE.
     [HideInInspector] public bool cantMove; //Used to be only for dialouge - if true, player cannot move
 
     //Other
@@ -92,6 +100,9 @@ public class PlayerUIManager : MonoBehaviour
         choiceOrigin = new Vector3(0, 205, 0);
         choiceOffscr = new Vector3(0, 950, 0);
 
+        gameOverOrigin = new Vector3(0, -160, 0);
+        gameOverOffscr = new Vector3(0, 300, 0);
+
         emotions = FindObjectOfType<PlayerEmotions>();
 
         examineUI.GetComponent<RectTransform>().LeanScaleX(0, 0f);
@@ -101,6 +112,7 @@ public class PlayerUIManager : MonoBehaviour
         isStatus = false;
         isExamining = false;
         choiceMade = true;
+        terminateEverything = false;
         cantMove = false;
 
     }
@@ -160,7 +172,7 @@ public class PlayerUIManager : MonoBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.Tab) && !isDialouge)
+        if(Input.GetKeyDown(KeyCode.Tab) && !isDialouge && !terminateEverything)
         {
 
             if (!isStatus)
@@ -169,6 +181,9 @@ public class PlayerUIManager : MonoBehaviour
                 StatusDisappear();
 
         }
+
+        if (terminateEverything)
+            cantMove = true;
 
     }
 
@@ -191,7 +206,7 @@ public class PlayerUIManager : MonoBehaviour
 
     #endregion
 
-    #region Examine and Map UI
+    #region Examine and Map UI (Buttons)
 
     public void PutAwayUI() //Make the Examine and Map buttons go offscreen
     {
@@ -364,6 +379,19 @@ public class PlayerUIManager : MonoBehaviour
         choiceUI.GetComponent<RectTransform>().LeanMoveLocal(choiceOffscr, 0.2f);
         
         choiceMade = true;
+
+    }
+
+    #endregion
+
+    #region Game Over
+
+    public void GameEnd()
+    {
+
+        PutAwayUI();
+        gameOverUI.GetComponent<RectTransform>().LeanMoveLocalY(380, 0.5f);
+        terminateEverything = true;
 
     }
 

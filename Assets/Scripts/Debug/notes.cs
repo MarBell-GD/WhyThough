@@ -46,7 +46,11 @@ public class notes
     Middle: 0, -90
     Right: 506, -90
 
-    Offscr: Add -1000 to Y
+    Offscr: Add -1000 to Y 
+
+    Bad End // Game Over UI posits:
+    Origin: 0, -160
+    Offscr: 0, 300
 
 
 

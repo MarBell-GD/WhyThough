@@ -27,11 +27,16 @@ public class ChoiceButton : MonoBehaviour
                 break;
 
             case Choice.choiceConsequence.StartNewDialog:
-                foreach(DialougeEntry entry in choice.newDialouge.dialouges)
+                dialogManage.Syncronize(choice.newDialouge);
+                foreach (DialougeEntry entry in choice.newDialouge.dialouges)
                 {
 
                     if(!uimanage.choiceMade)
+                    {
+
                         dialogManage.DialogueSentences.Enqueue(entry);
+
+                    }
 
                 }
                 uimanage.ChoicesBegone();
@@ -57,6 +62,7 @@ public class ChoiceButton : MonoBehaviour
                 {
 
                     PlayerEmotions emotionz = FindObjectOfType<PlayerEmotions>();
+
                     if(!uimanage.choiceMade)
                         emotionz.EmotionAdjust(choice.targetEmotion, choice.change, choice.subtract);
                 }
@@ -71,6 +77,8 @@ public class ChoiceButton : MonoBehaviour
                 if (choice.newDialouge != null)
                 {
 
+                    dialogManage.Syncronize(choice.newDialouge);
+
                     foreach (DialougeEntry entry in choice.newDialouge.dialouges)
                     {
 
@@ -78,6 +86,7 @@ public class ChoiceButton : MonoBehaviour
                             dialogManage.DialogueSentences.Enqueue(entry);
 
                     }
+
                     uimanage.ChoicesBegone();
 
                 }

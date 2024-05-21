@@ -104,7 +104,10 @@ public class PlayerMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, movePos, spd * Time.deltaTime); //<==== Spd affects this
 
         //code finished, off to kareoke(did I even spell that right), will continue soonTM
-        //horizontal movement does work btw just didn't make any horizontal spaces lol
+        //horizontal movement does work btw just didn't make any horizontal spaces lol <=== no longer true
+
+        if(Input.GetKeyDown(KeyCode.Escape)) //Little last minute keybind to quit in game
+            Application.Quit();
 
     }
 

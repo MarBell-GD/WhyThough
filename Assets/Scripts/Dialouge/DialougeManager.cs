@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialougeManager : MonoBehaviour
 {
 
+    #region Variables
+
     PlayerUIManager uimanage;
+    PlayerStatus status;
 
     [Header("Init")]
     public Queue<DialougeEntry> DialogueSentences;
@@ -21,6 +23,8 @@ public class DialougeManager : MonoBehaviour
     PlayerEmotions.Emotion targetEmotion;
     float emotionChange;
     bool subtract;
+
+    string deathDesc;
 
     Item givenItem;
 
@@ -39,11 +43,14 @@ public class DialougeManager : MonoBehaviour
     public GameObject char2;
     public GameObject char3;
 
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
         
         uimanage = FindObjectOfType<PlayerUIManager>();
+        status = FindObjectOfType<PlayerStatus>();
         DialogueSentences = new Queue<DialougeEntry>();
 
     }
@@ -93,6 +100,13 @@ public class DialougeManager : MonoBehaviour
         {
 
             givenItem = dialouge.givenItem;
+
+        }
+
+        if(aftermath == Dialouge.dialogConsequence.BadEnding)
+        {
+
+            deathDesc = dialouge.deathDescription;
 
         }
 
@@ -158,6 +172,10 @@ public class DialougeManager : MonoBehaviour
         if(DialogueSentences.Count == 0)
         {
 
+            EndDialouge();
+
+            #region Aftermath
+
             switch (aftermath)
             {
 
@@ -179,9 +197,18 @@ public class DialougeManager : MonoBehaviour
                     emotionz.EmotionAdjust(targetEmotion, emotionChange, subtract);
                     break;
 
+                case (Dialouge.dialogConsequence.Damage):
+                    status.hp--;
+                    break;
+
+                case (Dialouge.dialogConsequence.BadEnding):
+                    status.BadEnd(deathDesc);
+                    break;
+
             }
 
-            EndDialouge();
+            #endregion
+
             return;
 
         }
@@ -353,6 +380,36 @@ public class DialougeManager : MonoBehaviour
 
         Debug.Log("Alright, we're done here...");
         uimanage.DialougeFinished();
+
+    }
+
+    public void Syncronize(Dialouge dialogue) //For choices, updates dialogue consequences and whatnot
+    {
+
+        aftermath = dialogue.consequence;
+
+        if (aftermath == Dialouge.dialogConsequence.ChangeEmotion || aftermath == Dialouge.dialogConsequence.Both)
+        {
+
+            targetEmotion = dialogue.targetEmotion;
+            emotionChange = dialogue.emotionChange;
+            subtract = dialogue.subtract;
+
+        }
+
+        if (aftermath == Dialouge.dialogConsequence.GiveItem || aftermath == Dialouge.dialogConsequence.Both)
+        {
+
+            givenItem = dialogue.givenItem;
+
+        }
+
+        if (aftermath == Dialouge.dialogConsequence.BadEnding)
+        {
+
+            deathDesc = dialogue.deathDescription;
+
+        }
 
     }
 

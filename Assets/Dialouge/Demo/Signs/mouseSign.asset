@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: mouseSign
+  m_EditorClassIdentifier: 
+  consequence: 0
+  dialouges:
+  - type: 0
+    Name: Sign
+    side: 2
+    nameColor: {r: 1, g: 0.4358646, b: 0, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: 'WARNING: Hordes of mice up ahead!'
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Sign
+    side: 2
+    nameColor: {r: 1, g: 0.4358646, b: 0, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: You will get overwhelmed if you engage!!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  targetEmotion: 0
+  emotionChange: 0
+  subtract: 0
+  givenItem: {fileID: 0}
+  deathDescription: 

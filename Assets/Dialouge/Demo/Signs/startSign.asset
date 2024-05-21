@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: startSign
+  m_EditorClassIdentifier: 
+  consequence: 0
+  dialouges:
+  - type: 0
+    Name: Sign
+    side: 2
+    nameColor: {r: 1, g: 0.43110603, b: 0, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: You can use WASD to move in the directions you want to go! You can also
+      press Space to advance to the next entry of this dialogue.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Sign
+    side: 2
+    nameColor: {r: 1, g: 0.43110603, b: 0, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Press "Tab" to check your current emotion once you get out of this dialogue.
+      Emotion is important to keep track of, anything could happen!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Sign
+    side: 2
+    nameColor: {r: 1, g: 0.43110603, b: 0, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Why did I write this all on a sign? I don't know, it was a vision that
+      came to me in my dreams to write this down for a future traveler...
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Sign
+    side: 2
+    nameColor: {r: 1, g: 0.43110603, b: 0, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Oh, and don't forget to click to interact! Almost anything notable is able
+      to be interacted with!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  targetEmotion: 0
+  emotionChange: 0
+  subtract: 0
+  givenItem: {fileID: 0}
+  deathDescription: 

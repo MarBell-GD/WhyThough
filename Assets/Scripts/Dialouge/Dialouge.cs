@@ -30,4 +30,7 @@ public class Dialouge : ScriptableObject
     [Header("Consequence: Item")]
     public Item givenItem;
 
+    [Header("Consequence: Bad Ending")]
+    public string deathDescription;
+
 }

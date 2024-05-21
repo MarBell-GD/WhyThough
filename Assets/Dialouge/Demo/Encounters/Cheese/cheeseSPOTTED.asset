@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: cheeseSPOTTED
+  m_EditorClassIdentifier: 
+  consequence: 1
+  dialouges:
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Woah, you encountered some cheese! None fo the mice the sign mentioned
+      are around either...
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: This is obviously the perfect time to get some free food while we're out
+      in this forest!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: As you start walking towards the cheese, you see a familiar face in the
+      shadows...
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Big Bad Wolf
+    side: 1
+    nameColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: Gahaha! Look at this, if it ain't the little kid wandering where she shouldn't
+      be!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Big Bad Wolf
+    side: 1
+    nameColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: You want this cheese right here, the very cheese I worked my ass off for
+      with getting all those mice away huh?
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: You see the Big Bad Wolf take most of the cheese, leaving behind barely
+      enough to even eat now.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Big Bad Wolf
+    side: 1
+    nameColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: GAHAHAHA!! Enjoy those "cheesecrumbs" KID!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: And so the wolf goes off, and you're left with...just about nothing to
+      eat.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  targetEmotion: 0
+  emotionChange: 20
+  subtract: 0
+  givenItem: {fileID: 0}
+  deathDescription: 

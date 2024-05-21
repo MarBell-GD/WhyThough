@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: brutestrength
+  m_EditorClassIdentifier: 
+  consequence: 5
+  dialouges:
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: You go straight up to the wolf and prepare a devastating right hook!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
+    side: 2
+    nameColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: ...Your fighting experience is pretty miniscule though. You're only but
+      a child Red.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: ???
+    side: 2
+    nameColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: I won't describe the scene to you, it's too embarassing. Just know, you
+      can pick up that pen and try again.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  targetEmotion: 0
+  emotionChange: 0
+  subtract: 0
+  givenItem: {fileID: 0}
+  deathDescription: A wolf in combat can't be the smartest Red. Strike wise.
