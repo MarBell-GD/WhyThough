@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerEmotions : MonoBehaviour
 {
 
+    //The code here is so extremely simple...if you don't get it I can't help you
+
     [HideInInspector] [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float rageEmo;
     [HideInInspector] [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float lazyEmo;
     [HideInInspector] [Range(1, 100)] [Tooltip("Only edit here for testing purposes")] public float fearEmo;
@@ -98,6 +100,7 @@ public class PlayerEmotions : MonoBehaviour
 
     #endregion
 
+    //Public thing so other scripts can call and affect emotions
     public void EmotionAdjust(Emotion emotion, float value, bool subtract)
     {
 

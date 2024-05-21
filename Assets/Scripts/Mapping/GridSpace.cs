@@ -10,7 +10,7 @@ public class GridSpace : ScriptableObject
     public Vector2 pos; //Position on the map of this space
     public Sprite background; //For examination
     
-    public bool requiresThing; //Doesn't do anything for now...
+    public bool requiresThing; //Doesn't do anything...still...
     [HideInInspector] public bool currentSpace;
 
     public ItemSpawn spawn;

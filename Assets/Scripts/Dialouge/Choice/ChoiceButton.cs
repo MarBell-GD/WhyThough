@@ -5,6 +5,8 @@ using UnityEngine;
 public class ChoiceButton : MonoBehaviour
 {
 
+    //This script goes in the buttons for the choice UI and shouldn't be edited now, it works as is
+
     [HideInInspector] public PlayerUIManager uimanage;
     [HideInInspector] public Choice choice;
 
@@ -20,15 +22,16 @@ public class ChoiceButton : MonoBehaviour
 
         DialougeManager dialogManage = FindObjectOfType<DialougeManager>();
 
-        switch(choice.consequence)
+        switch(choice.consequence) //i love switch cases
         {
 
             case Choice.choiceConsequence.None:
                 break;
 
             case Choice.choiceConsequence.StartNewDialog:
-                dialogManage.Syncronize(choice.newDialouge);
-                foreach (DialougeEntry entry in choice.newDialouge.dialouges)
+                dialogManage.Syncronize(choice.newDialouge); //<=== explained in the inherited script
+                foreach (DialougeEntry entry in choice.newDialouge.dialouges) 
+                    //Puts all the dialogue in the current one
                 {
 
                     if(!uimanage.choiceMade)
@@ -51,7 +54,7 @@ public class ChoiceButton : MonoBehaviour
                 break;
 
             case Choice.choiceConsequence.GiveItem:
-                //Does nothing for now >.<
+                //Still does nothing for now >.<
                 PlayerInventory inv = FindObjectOfType<PlayerInventory>();
                 uimanage.ChoicesBegone();
                 dialogManage.DisplayNextEntry();
@@ -61,7 +64,7 @@ public class ChoiceButton : MonoBehaviour
                 if (choice.targetEmotion != PlayerEmotions.Emotion.Neutral)
                 {
 
-                    PlayerEmotions emotionz = FindObjectOfType<PlayerEmotions>();
+                    PlayerEmotions emotionz = FindObjectOfType<PlayerEmotions>(); //Emotions, but COOL
 
                     if(!uimanage.choiceMade)
                         emotionz.EmotionAdjust(choice.targetEmotion, choice.change, choice.subtract);
@@ -71,14 +74,16 @@ public class ChoiceButton : MonoBehaviour
                 {
 
                     //lmao
+                    //me when I'm lazy
 
                 }
 
                 if (choice.newDialouge != null)
                 {
 
-                    dialogManage.Syncronize(choice.newDialouge);
+                    dialogManage.Syncronize(choice.newDialouge); //<=== explained in the inherited script
 
+                    //Check above for explanation on this
                     foreach (DialougeEntry entry in choice.newDialouge.dialouges)
                     {
 

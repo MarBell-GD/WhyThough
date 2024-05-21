@@ -27,7 +27,7 @@ public class MenuButtons : MonoBehaviour
 
     }
 
-    public void Retry()
+    public void Retry() //Reloads scene
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

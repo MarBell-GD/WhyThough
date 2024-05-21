@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraCtrl : MonoBehaviour
 {
 
+    //Very basic camera follow, just tweaked a bit for this game
+
     public float offset;
     [HideInInspector] public Vector3 overhead;
 

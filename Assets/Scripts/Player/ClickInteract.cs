@@ -6,6 +6,8 @@ public class ClickInteract : MonoBehaviour
 {
 
     //ripped from my code for games work with some modifs for this game
+    //Should be very ez to follow without comments because of that
+
     [HideInInspector] public PlayerUIManager uimanage;
     [HideInInspector] public PlayerEmotions emotions;
 

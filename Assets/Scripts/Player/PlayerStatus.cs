@@ -25,7 +25,7 @@ public class PlayerStatus : MonoBehaviour
     void Update()
     {
 
-        if (hp <= 0 && !gameOver)
+        if (hp <= 0 && !gameOver) //Automatically get a bad end once you run out of hp
             BadEnd(null);
 
         if(gameOver)
@@ -42,6 +42,7 @@ public class PlayerStatus : MonoBehaviour
 
         #region Filler Descriptions
 
+        //A bunch of filler death descriptions for dying by running out of hp
         if (howithappen == null || howithappen == "")
         {
 
@@ -104,7 +105,7 @@ public class PlayerStatus : MonoBehaviour
         deathdesc.text = howithappen;
 
         uimanage.GameEnd();
-        Debug.Log("It's all over.");        
+        Debug.Log("It's all over.");  // :(      
 
     }
 

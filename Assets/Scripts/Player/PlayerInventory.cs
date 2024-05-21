@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
 
+    //This whole script does absolutely fuck or all
+
     [HideInInspector] public List<Item> inv;
 
     // Start is called before the first frame update
@@ -20,6 +22,8 @@ public class PlayerInventory : MonoBehaviour
     {
         
         //hm?
+        //...
+        //why are you still here?
 
     }
 }

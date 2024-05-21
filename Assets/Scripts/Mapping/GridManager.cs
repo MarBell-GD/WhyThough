@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class GridManager : MonoBehaviour
 {
 
-    public Map grid;
-    PlayerMovement plr;
-    public Image bg;
+    public Map grid; //The map in question
+    PlayerMovement plr; //For cross-referencing position
+    public Image bg; //Examine background
 
     public GameObject spawnedItem;
     PlayerUIManager uimanage;
@@ -33,6 +33,7 @@ public class GridManager : MonoBehaviour
     void Update()
     {
         
+        //Player position check
         foreach(GridSpace space in grid.spaces)
         {
 
@@ -42,6 +43,7 @@ public class GridManager : MonoBehaviour
                 bg.sprite = space.background;
                 space.currentSpace = true;
 
+                //v - For finding items in certain map spaces
                 if(space.spawn != null && !space.wasCollected && uimanage.isExamining)
                 {
                     
@@ -55,7 +57,7 @@ public class GridManager : MonoBehaviour
 
                 }
                 
-                if(space.wasCollected || space.spawn == null)
+                if(space.wasCollected || space.spawn == null) //Item disappears if collected already
                     spawnedItem.SetActive(false);
 
             }

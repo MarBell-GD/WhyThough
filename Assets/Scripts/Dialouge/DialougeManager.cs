@@ -6,29 +6,34 @@ using UnityEngine.UI;
 public class DialougeManager : MonoBehaviour
 {
 
+    //Alright, this is a lot of shit, stay with me here
+
     #region Variables
 
     PlayerUIManager uimanage;
     PlayerStatus status;
 
     [Header("Init")]
-    public Queue<DialougeEntry> DialogueSentences;
+    public Queue<DialougeEntry> DialogueSentences; //I didn't hide it in inspect but don't edit it
 
     public TMPro.TextMeshProUGUI NameText;
     public TMPro.TextMeshProUGUI DialogueText;
 
     public float TypeTime; //Might make it so dialouge entires can change this, I dunno, will def speed it up tho
-    public Dialouge.dialogConsequence aftermath;
+    //Update: I did not in fact, do it
+    public Dialouge.dialogConsequence aftermath; //What happens after the dialogue ends
 
+    //Related to emotion consequence
     PlayerEmotions.Emotion targetEmotion;
     float emotionChange;
     bool subtract;
 
+    //Related to Bad Ending consequence
     string deathDesc;
 
-    Item givenItem;
+    Item givenItem; //does fuckin nothin
 
-    [Header("Choice-related")]
+    [Header("Choice-related")] //<=== yeah just check the header, self explanatory
     public ChoiceButton c1button;
     public TMPro.TextMeshProUGUI c1Text;
 
@@ -38,7 +43,7 @@ public class DialougeManager : MonoBehaviour
     public ChoiceButton c3button;
     public TMPro.TextMeshProUGUI c3Text;
 
-    [Header("Other UI Stuff")]
+    [Header("Other UI Stuff")] //dialogue character uis
     public GameObject char1;
     public GameObject char2;
     public GameObject char3;
@@ -71,12 +76,13 @@ public class DialougeManager : MonoBehaviour
 
     #endregion
 
+    //Let's begin shall we?
     public void StartDialouge(Dialouge dialouge)
     {
 
         Debug.Log("Oh? Someone wants to talk.");
         uimanage.DialougeMoment();
-        DialogueSentences.Clear();
+        DialogueSentences.Clear(); //reset the entries
 
         foreach (DialougeEntry entry in dialouge.dialouges)
         {
@@ -84,6 +90,11 @@ public class DialougeManager : MonoBehaviour
             DialogueSentences.Enqueue(entry);
 
         }
+
+        #region Consequences
+
+        //The dialogue has info for this stuff built into it
+        //This code copies that info and temporarily stores it in here
 
         aftermath = dialouge.consequence;
 
@@ -110,15 +121,22 @@ public class DialougeManager : MonoBehaviour
 
         }
 
+        #endregion
+
         DisplayFirstEntry();
 
     }
 
+    //"why is there a DisplayFirstEntry and a DisplayNextEntry"
+    //well originally when there was only DisplayNextEntry, dialogue wouldn't come in very smoothly
+    //you could legit see the name panel move to a side as its coming up, nobody wanna see that bruh move around
+    //and so now we're here
     public void DisplayFirstEntry()
     {
 
         DialougeEntry entry = DialogueSentences.Dequeue();
-        InstantDialougeInit(entry);
+        InstantDialougeInit(entry); //<=== this sole thing is the fix for everything
+        //Everything else is copy pasted from NextEntry
         StopAllCoroutines();
         StartCoroutine(TypingDialouge(entry.text));
 
@@ -169,7 +187,7 @@ public class DialougeManager : MonoBehaviour
     public void DisplayNextEntry()
     {
 
-        if(DialogueSentences.Count == 0)
+        if(DialogueSentences.Count == 0) //Check for if there's nothing left to say
         {
 
             EndDialouge();
@@ -193,15 +211,15 @@ public class DialougeManager : MonoBehaviour
                     break;
 
                 case (Dialouge.dialogConsequence.Both):
-                    PlayerEmotions emotionz = FindObjectOfType<PlayerEmotions>();
+                    PlayerEmotions emotionz = FindObjectOfType<PlayerEmotions>(); //COOL version
                     emotionz.EmotionAdjust(targetEmotion, emotionChange, subtract);
                     break;
 
                 case (Dialouge.dialogConsequence.Damage):
-                    status.hp--;
+                    status.hp--; //You automatically get a Bad End when this goes down 3 times
                     break;
 
-                case (Dialouge.dialogConsequence.BadEnding):
+                case (Dialouge.dialogConsequence.BadEnding): //Instant game over
                     status.BadEnd(deathDesc);
                     break;
 
@@ -213,17 +231,18 @@ public class DialougeManager : MonoBehaviour
 
         }
 
-        DialougeEntry entry = DialogueSentences.Dequeue();
-        DialougeInit(entry);
+        DialougeEntry entry = DialogueSentences.Dequeue(); //Takes out the last dialogue entry
+        DialougeInit(entry); //Sets up style stuff (name text, move the name panel)
         StopAllCoroutines();
         StartCoroutine(TypingDialouge(entry.text));
 
+        //a bunch of shit for choices
         if(entry.type == DialougeEntry.dialougeType.Choice)
         {
 
             c1button.choice = entry.c1;
 
-            if(entry.c2 != null)
+            if(entry.c2 != null) //<=== only appears if there IS a choice to even be made
                 c2button.choice = entry.c2;
 
             if (entry.c3 != null)
@@ -245,7 +264,7 @@ public class DialougeManager : MonoBehaviour
             c2button.gameObject.SetActive(true);
             c3button.gameObject.SetActive(true);
 
-            if(entry.choiceNum == 2)
+            if(entry.choiceNum == 2) //double-check for if the choices are even supposed to be there
                 c3button.gameObject.SetActive(false);
             else if(entry.choiceNum == 1)
             {
@@ -258,6 +277,8 @@ public class DialougeManager : MonoBehaviour
             uimanage.ChoicesAppear();
 
         }
+
+        //v - Dialogue Character stuff - v
 
         if (entry.char1present)
         {
@@ -303,6 +324,8 @@ public class DialougeManager : MonoBehaviour
 
     }
 
+    //function for typing text, feel free to take it :)
+    //After all, what programmer doesn't copy and paste
     IEnumerator TypingDialouge(string sentence)
     {
 
@@ -374,16 +397,18 @@ public class DialougeManager : MonoBehaviour
     void EndDialouge()
     {
 
+        //Get these irrelevant ahh people out my sight
         char1.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.4f);
         char2.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.4f);
         char3.GetComponent<RectTransform>().LeanMoveLocalY(-1090f, 0.4f);
 
-        Debug.Log("Alright, we're done here...");
+        Debug.Log("Alright, we're done here..."); //true...so true...
         uimanage.DialougeFinished();
 
     }
 
-    public void Syncronize(Dialouge dialogue) //For choices, updates dialogue consequences and whatnot
+    public void Syncronize(Dialouge dialogue) //For choices, updates dialogue consequences and
+        //overwrites current stored dialogue data
     {
 
         aftermath = dialogue.consequence;

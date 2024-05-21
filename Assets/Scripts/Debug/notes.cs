@@ -35,7 +35,7 @@ public class notes
 
     URGENT!: Bug with the movement transition UI due to how movement works, add a movement cooldown to prevent it
     (it's caused by the player being given control again the moment the plr reaches the spot they're moving to, which is before
-    the transition can even finish lol -.-)
+    the transition can even finish lol -.-) <=== I didn't even do it bruh
 
     Choice UI posits:
     Origin: 0, 205, 0

@@ -5,13 +5,14 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
 
+    public bool webBuild; //If true, can't be fullscreened // for web version
     [HideInInspector] public bool fullscreen;
 
     private void Awake()
     {
         
         DontDestroyOnLoad(this.gameObject);
-        fullscreen = true;
+        fullscreen = false;
 
     }
 
@@ -30,7 +31,7 @@ public class MenuManager : MonoBehaviour
 
         Screen.fullScreen = fullscreen;
 
-        if(!fullscreen)
+        if(!fullscreen && !webBuild)
         {
 
             Screen.SetResolution(1280, 720, false);

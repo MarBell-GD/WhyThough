@@ -6,9 +6,9 @@ using UnityEngine;
 public class Dialouge : ScriptableObject
 {
 
-    public dialogConsequence consequence;
+    public dialogConsequence consequence; //Happens after dialogue
 
-    public DialougeEntry[] dialouges;
+    public DialougeEntry[] dialouges; 
 
     public enum dialogConsequence
     {
@@ -28,9 +28,9 @@ public class Dialouge : ScriptableObject
     public bool subtract;
 
     [Header("Consequence: Item")]
-    public Item givenItem;
+    public Item givenItem; //<=== doesn't do anything
 
     [Header("Consequence: Bad Ending")]
-    public string deathDescription;
+    public string deathDescription; //how did you fuck up
 
 }
