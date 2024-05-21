@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: frogDeal
+  m_EditorClassIdentifier: 
+  consequence: 1
+  dialouges:
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Coming up with a mischeivous idea, you suddenly grabs Parisa.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Parisa the fairy
+    side: 2
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 0}
+    text: 'Woah! Hey, mind telling me what your plan is before suddenly grabbing
+      me? I''m delicate, you know. '
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Responding with only a grin, you do your best windup pitch pose that you've
+      seen baseball players do on TV.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Parisa the fairy
+    side: 0
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 0}
+    text: 'Red, I swear on Sunflower Grove, you better not fu- '
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 1
+    char3: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    text: Parisa is abruptly cut off as she is suddenly hurling towards the pond
+      at high velocity.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 0
+    char1: {fileID: 0}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Unexpectedly, a giant frog leaps out of the pond, tongue lassoing Parisa
+      into its mouth, and lands a short distance in front of you all in one motion.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Giant frog
+    side: 1
+    nameColor: {r: 0, g: 0.5019608, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: 'Mmmm, that should hold me until dinner. '
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Giant frog
+    side: 1
+    nameColor: {r: 0, g: 0.5019608, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Oh! Hello there, I assume that was your friend I just ate and I assume
+      you want them back, correct? Unfortunately, fairies are a delicacy around this
+      area so I rather not part with my meal.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Giant frog
+    side: 1
+    nameColor: {r: 0, g: 0.5019608, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Hmmm... Unless you can get me some cheese. You see, I'm a cheese connoisseur
+      so any ol' cheese won't do. I heard some nearby mice obtained some delectable
+      cheese recently. Retrieve some for me and I'll return your friend.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  targetEmotion: 2
+  emotionChange: 50
+  subtract: 0
+  givenItem: {fileID: 0}
+  deathDescription: 

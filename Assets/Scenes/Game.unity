@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20067206, g: 0.20332453, b: 0.20366472, a: 1}
+  m_IndirectSpecularColor: {r: 0.1882762, g: 0.19113821, b: 0.19109797, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4191,11 +4191,11 @@ MonoBehaviour:
   condition: 0
   emotionReq: 0
   emotionThreshold: 0
-  alternate: 0
-  altDialouge: {fileID: 0}
+  alternate: 1
+  altDialouge: {fileID: 11400000, guid: 20f22596ff8586f46a77589ef2bbbe22, type: 2}
   hasInteracted: 0
-  AltemotionReq: 0
-  AltemotionThreshold: 0
+  AltemotionReq: 2
+  AltemotionThreshold: 50
 --- !u!135 &488318975
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7462,11 +7462,11 @@ MonoBehaviour:
   dialouge: {fileID: 11400000, guid: 4e39a6ed1617e3541a0b42686c6e6afc, type: 2}
   condition: 1
   emotionReq: 0
-  emotionThreshold: 10
+  emotionThreshold: 50
   alternate: 1
   altDialouge: {fileID: 11400000, guid: 1d93012dfbe104043ae88947d977b193, type: 2}
   hasInteracted: 0
-  AltemotionReq: 0
+  AltemotionReq: 3
   AltemotionThreshold: 0
 --- !u!1 &850918192
 GameObject:
@@ -16845,14 +16845,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialouge: {fileID: 11400000, guid: 8e5d68ab328ed4540a6286b95bc8f1cb, type: 2}
-  condition: 0
-  emotionReq: 0
-  emotionThreshold: 0
+  condition: 1
+  emotionReq: 2
+  emotionThreshold: 50
   alternate: 1
   altDialouge: {fileID: 11400000, guid: fd1020232fa992e489eeccfa23028e38, type: 2}
   hasInteracted: 0
-  AltemotionReq: 0
-  AltemotionThreshold: 0
+  AltemotionReq: 1
+  AltemotionThreshold: 30
 --- !u!1 &1775763757
 GameObject:
   m_ObjectHideFlags: 0

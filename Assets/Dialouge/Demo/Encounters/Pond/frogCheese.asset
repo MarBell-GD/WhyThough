@@ -10,28 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
-  m_Name: sadcheese
+  m_Name: frogCheese
   m_EditorClassIdentifier: 
-  consequence: 1
+  consequence: 0
   dialouges:
-  - type: 0
-    Name: 
-    side: 2
-    nameColor: {r: 0, g: 0, b: 0, a: 0}
-    char1present: 0
-    char1: {fileID: 0}
+  - type: 1
+    Name: Giant frog
+    side: 1
+    nameColor: {r: 0, g: 0.5019608, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
     char2present: 0
     char2: {fileID: 0}
     char3present: 0
     char3: {fileID: 0}
-    text: All you see now is several mice, a few mere slivers of cheese, and broken
-      dreams... of eating cheese...
-    choiceNum: 0
-    c1: {fileID: 0}
-    c2: {fileID: 0}
+    text: Ah, you've returned. I hope you have some cheese on you.
+    choiceNum: 2
+    c1: {fileID: 11400000, guid: 4d639fe6ae363744783c094cf025ba3a, type: 2}
+    c2: {fileID: 11400000, guid: 40aafe6be6b6a8e4ba9908c39b9b7ea5, type: 2}
     c3: {fileID: 0}
-  targetEmotion: 1
-  emotionChange: 30
+  targetEmotion: 0
+  emotionChange: 0
   subtract: 0
   givenItem: {fileID: 0}
   deathDescription: 

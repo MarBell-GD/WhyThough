@@ -26,7 +26,22 @@ MonoBehaviour:
     char3: {fileID: 0}
     text: It's a nice clear blue pond.
     choiceNum: 2
-    c1: {fileID: 11400000, guid: 465d5c1bc90255e4793886a37c4a58ad, type: 2}
+    c1: {fileID: 0}
+    c2: {fileID: 11400000, guid: 7e79d8d972be7074f815e0939e750221, type: 2}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Parisa the fairy
+    side: 2
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: I sense something in the water. Might just be a frog. Who knows.
+    choiceNum: 1
+    c1: {fileID: 0}
     c2: {fileID: 11400000, guid: 7e79d8d972be7074f815e0939e750221, type: 2}
     c3: {fileID: 0}
   - type: 1
@@ -40,10 +55,10 @@ MonoBehaviour:
     char3present: 0
     char3: {fileID: 0}
     text: Do you want to take a closer look for anything interesting?
-    choiceNum: 2
+    choiceNum: 3
     c1: {fileID: 11400000, guid: 465d5c1bc90255e4793886a37c4a58ad, type: 2}
-    c2: {fileID: 11400000, guid: 7e79d8d972be7074f815e0939e750221, type: 2}
-    c3: {fileID: 0}
+    c2: {fileID: 11400000, guid: 21b8882dc92fe1544b9b2a27611e55ba, type: 2}
+    c3: {fileID: 11400000, guid: 3d9c2a93a6478214fadc047d6deaa2c8, type: 2}
   targetEmotion: 0
   emotionChange: 0
   subtract: 0

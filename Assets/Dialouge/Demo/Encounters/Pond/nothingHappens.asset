@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
-  m_Name: pondgameover
+  m_Name: nothingHappens
   m_EditorClassIdentifier: 
-  consequence: 5
+  consequence: 0
   dialouges:
   - type: 0
     Name: 
@@ -24,25 +24,25 @@ MonoBehaviour:
     char2: {fileID: 0}
     char3present: 0
     char3: {fileID: 0}
-    text: As you look further in the pond, a giant frog jumps out of the pond and
-      grabs you with its tongue, dragging you into the depths of the pond...!
+    text: The stone pierces the still, blue waters causing small ripples to spread.
+      Some bubbles arise from a small distance away from the ripples. Aside from
+      that, nothing else happens.
     choiceNum: 0
     c1: {fileID: 0}
     c2: {fileID: 0}
     c3: {fileID: 0}
   - type: 0
-    Name: 
-    side: 2
-    nameColor: {r: 0, g: 0, b: 0, a: 0}
-    char1present: 0
-    char1: {fileID: 0}
-    char2present: 0
-    char2: {fileID: 0}
+    Name: Parisa the fairy
+    side: 0
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
     char3present: 0
     char3: {fileID: 0}
-    text: It's hard to recognize the immediate danger you just got put in, but you're
-      not even given the time...as you take your last breath, submerged in the deep
-      waters.
+    text: Nothing, huh? I wonder what it was that I sensed. Eh, doesn't matter. Let's
+      go, Red.
     choiceNum: 0
     c1: {fileID: 0}
     c2: {fileID: 0}
@@ -51,4 +51,4 @@ MonoBehaviour:
   emotionChange: 0
   subtract: 0
   givenItem: {fileID: 0}
-  deathDescription: Not everything in this story is as you wrote it, Red.
+  deathDescription: 

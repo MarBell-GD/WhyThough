@@ -78,6 +78,37 @@ MonoBehaviour:
     c1: {fileID: 0}
     c2: {fileID: 0}
     c3: {fileID: 0}
+  - type: 0
+    Name: Parisa the fairy
+    side: 2
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 0}
+    text: WASD? Tab? All of this sounds important but I don't know what any of this
+      means. The person who wrote must have been crazy or something.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Parisa the fairy
+    side: 2
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Come on, Red, we'll have to figure out things on our own.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
   targetEmotion: 0
   emotionChange: 0
   subtract: 0

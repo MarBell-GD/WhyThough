@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e78856373b892494886f7006d1666b36, type: 3}
-  m_Name: susPond
+  m_Name: throwFairy
   m_EditorClassIdentifier: 
-  ChoiceText: No
-  consequence: 0
-  newDialouge: {fileID: 0}
+  ChoiceText: Throw Parisa
+  consequence: 1
+  newDialouge: {fileID: 11400000, guid: 59d65d8ced6e96740b34e5a3d7393a96, type: 2}
   targetEmotion: 0
   change: 0
   subtract: 0

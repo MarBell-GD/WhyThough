@@ -47,6 +47,82 @@ MonoBehaviour:
     c2: {fileID: 0}
     c3: {fileID: 0}
   - type: 0
+    Name: Little Red
+    side: 0
+    nameColor: {r: 1, g: 0, b: 0, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: SHUT UP! I'm tired of you always being mean to me! I've had enough!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Narrator
+    side: 2
+    nameColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+    char1present: 0
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: Ah, so she finally talks.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Parisa the fairy
+    side: 2
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: You can talk??
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Big Bad Wolf
+    side: 1
+    nameColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: You can talk?!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Little Red
+    side: 0
+    nameColor: {r: 1, g: 0, b: 0, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: Yes, I can talk! I just didn't want to talk to YOU, fur face! I'm gonna
+      make you regret ever messing me!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
     Name: 
     side: 1
     nameColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
@@ -56,8 +132,8 @@ MonoBehaviour:
     char2: {fileID: 0}
     char3present: 0
     char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
-    text: Immediately, you grab a rock and act entirely on instinct. You completely
-      bash the wolf's skull in.
+    text: Exploding with rage, you immediately grab a rock and act entirely on instinct.
+      You completely bash the wolf's skull in.
     choiceNum: 0
     c1: {fileID: 0}
     c2: {fileID: 0}
@@ -79,7 +155,37 @@ MonoBehaviour:
     c2: {fileID: 0}
     c3: {fileID: 0}
   - type: 0
-    Name: ???
+    Name: Parisa
+    side: 2
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 1
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: Holy shit, Red! Where did THAT come from and WHY did you that?!
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
+    text: You go silent, not bothering to respond to Parisa's questions.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Narrator
     side: 2
     nameColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     char1present: 0
@@ -94,7 +200,7 @@ MonoBehaviour:
     c2: {fileID: 0}
     c3: {fileID: 0}
   - type: 0
-    Name: ???
+    Name: Narrator
     side: 2
     nameColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     char1present: 0
@@ -109,7 +215,7 @@ MonoBehaviour:
     c2: {fileID: 0}
     c3: {fileID: 0}
   - type: 0
-    Name: ???
+    Name: Narrator
     side: 2
     nameColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     char1present: 0
@@ -118,7 +224,8 @@ MonoBehaviour:
     char2: {fileID: 0}
     char3present: 0
     char3: {fileID: 21300000, guid: 0ba18ba868184104984811891ff3e84c, type: 3}
-    text: Get some shuteye, tomorrow is a new day for more stories.
+    text: That's it for now. Thank you for playing this small piece of Why Though!
+      Stay tuned for more stories in the future.
     choiceNum: 0
     c1: {fileID: 0}
     c2: {fileID: 0}

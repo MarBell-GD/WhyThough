@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736abfade741d646a876ae653ab7383, type: 3}
+  m_Name: freeParisa
+  m_EditorClassIdentifier: 
+  consequence: 1
+  dialouges:
+  - type: 0
+    Name: Giant
+    side: 1
+    nameColor: {r: 0, g: 0.5019608, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Excellent! I can hardly wait. Quickly, hand it over.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 1
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: You stretch out your arm with the cheese in hand. The frog impatiently
+      tongue whips it, leaving your hand a slimy mess.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Giant frog
+    side: 1
+    nameColor: {r: 0, g: 0.5019608, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 0
+    char3: {fileID: 0}
+    text: By the swamps of Walovia, this taste, this texture! It's as if I have a
+      piece of Heaven is frolicking on my tongue! Simply DIVINE! Tis a shame you
+      didn't have more but no matter, a deal is a deal.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 0
+    char2: {fileID: 0}
+    char3present: 1
+    char3: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    text: 'Without missing a beat, the frog promptly regurgitates Parisa, leaving
+      her in a slimy pile of frog saliva on the ground. '
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: Parisa the fairy
+    side: 2
+    nameColor: {r: 0.5294118, g: 0.80784315, b: 0.98039216, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 0}
+    text: Oh, good to see to YOU again! Dying in a frog's stomach is NOT how I want
+      to go out. I'm not thanking because it was your fault to begin with, you cherry
+      colored moron! Don't you EVER use me as a projectile EVER AGAIN. Now Let's
+      go.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  - type: 0
+    Name: 
+    side: 2
+    nameColor: {r: 0, g: 0, b: 0, a: 0}
+    char1present: 1
+    char1: {fileID: 21300000, guid: b19a1de06242e1441ade104ea91f5081, type: 3}
+    char2present: 1
+    char2: {fileID: 21300000, guid: f439a14f2fe56874ea6a18eb3d81b8f3, type: 3}
+    char3present: 0
+    char3: {fileID: 0}
+    text: After being scolded and taking a tiny knuckle sandwich to the forehead,
+      you apologize and give a sigh of rellief. You're happy to have your friend
+      back, even if it was your fault she needed help.
+    choiceNum: 0
+    c1: {fileID: 0}
+    c2: {fileID: 0}
+    c3: {fileID: 0}
+  targetEmotion: 0
+  emotionChange: 50
+  subtract: 0
+  givenItem: {fileID: 0}
+  deathDescription: 
